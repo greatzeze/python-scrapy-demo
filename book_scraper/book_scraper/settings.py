@@ -90,8 +90,16 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = "scrapy.extensions.httpcache.FilesystemCacheStorage"
 
 # Set settings whose default value is deprecated to a future-proof value
-FEED_EXPORT_ENCODING = "utf-8"
 
 FEED_FORMAT = "json"
 FEED_URI = "data.txt"
 FEED_EXPORT_ENCODING = "utf-8"
+
+FEEDS = {
+    'data.csv': {
+        'format': 'csv',
+        'encoding': 'utf8',
+        'fields': ['title','price','stock_status','rating'],
+        'overwrite': True
+    }
+}
