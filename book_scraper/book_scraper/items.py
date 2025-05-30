@@ -16,3 +16,5 @@ class BookItem(scrapy.Item):
     price = scrapy.Field()
     stock_status = scrapy.Field()
     rating = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
